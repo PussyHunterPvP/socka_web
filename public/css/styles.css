@@ -1,0 +1,75 @@
+html{
+  margin:0;
+
+}
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+input {
+  border: none;
+  border-bottom: 2px black solid;
+}
+.bocny-panel {
+ width:  15%;
+ height: 100vh;
+ position: fixed;
+ background-color: purple;
+}
+.bocny-panel div {
+  position: relative;
+}
+.nadpis{
+  color: white;
+  position: absolute;
+  top: 50vh;
+  left: -50%;
+  transform: translate(-50%);
+  transform: rotate(-90deg);
+  font-size: 5rem;
+}
+.content{
+  margin-left: 15%;
+}
+.content h1 {
+  margin: 0;
+  text-align: center;
+  padding: 5%;
+  background-color: grey;
+  color: white;
+}
+.content .meno {
+  margin-left:  5%;
+  margin-top: 5%;
+  display: inline-block;
+}
+.content .textInput {
+    margin-left:  5%;
+    margin-top: 1%;
+
+}
+.content button {
+  margin-left:  10%;
+  margin-top: 1%;
+}
+.okienko {
+  margin-left: 10%;
+  margin-top: 1%;
+}
+.textDB {
+  display: inline-block;
+  border-bottom: 1px black solid;
+  padding: 1%;
+  margin-left:0;
+
+}
+.menoDB{
+  display: inline-block;
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+  padding: 1%;
+  margin-right: 0;
+}
