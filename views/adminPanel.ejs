@@ -1,0 +1,84 @@
+<%- include("templaty/hlavicka") %>
+
+
+
+
+
+<div class="container container-admin">
+
+<div class="menuText">
+  <h1>Admin Panel</h1>
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+
+
+      <div class="navbar-nav">
+        <button type="button" class="btn btn-warning button-admin" onclick="home();">Domov</button>
+        <button type="button" class="btn btn-warning button-admin" onclick="video();">Video</button>
+      </div>
+
+  </div>
+</nav>
+<div id="home">
+  <div class="card">
+  <div class="card-body">
+    <div class="db-info">
+
+      <h2>Databáza : <span style="font-size:1.5rem;"><%= dbInfo %></span></h2>
+
+
+      <h2> Počet Adminov : <%= pocetAdminov.length %> </h2>
+      <ul>
+
+      <% pocetAdminov.forEach((admin) => { %>
+
+        <li>
+          <%= admin.username %>
+          </li>
+      <% }); %>
+      </ul>
+
+  </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+<div id="video">
+  <div class="container-login">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ivX4cNeDKE1l8MPna03NqwHaD3%26pid%3DApi&f=1" alt="">
+    <!-- <img name="main" id="main" border="0" width="640" height="480"
+    src="http://87.244.209.146:5000/video_feed"> -->
+  </div>
+</div>
+
+<div class="intro">
+  <div class="intro-text">
+    <h1 class="hide">
+      <span class="text dots2">načítavam informácie ...</span>
+    </h1>
+  </div>
+</div>
+
+<div class="slider"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+<script>
+     function home(){
+       document.getElementById('video').style.visibility = 'hidden';
+       document.getElementById('home').style.visibility = 'visible';
+     }
+     function video(){
+       document.getElementById('home').style.visibility = 'hidden';
+       document.getElementById('video').style.visibility = 'visible';
+     }
+</script>
+<script type="text/javascript" src="js/animation.js"></script>
+
+<%- include("templaty/paticka") %>

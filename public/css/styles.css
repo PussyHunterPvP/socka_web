@@ -1,14 +1,120 @@
-html{
-  margin:0;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body{
   font-family: 'Lato', sans-serif;
-  margin: 0;
 }
-p{
-  margin: 0;
+
+form {
+  width: 50%;
+  margin: auto;
 }
+/*
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  border-radius: 10px;
+} */
+/*///////////////// LOGIN page //////////////////////*/
+.container-login{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.col-12 h1 {
+ font-size: 4rem;
+}
+
+.row{
+  text-align: center;
+}
+
+/*///////////////// ADMIN page //////////////////////*/
+.container-admin {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menuText {
+  text-align: center;
+}
+.menuText h1 {
+   font-size: 4rem;
+   padding-bottom: 5px;
+   border-bottom: 2px solid black;
+}
+
+.button-admin {
+  margin-right: 10px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#video {
+  visibility: hidden;
+}
+
+.db-info {
+  margin-left: 5%;
+}
+
+.db-info h2 {
+  margin: 1.5% 0;
+}
+
+.navbar-toggler {
+  background-color: black;
+  color: white;
+}
+
+/*////////////// ANIMACIA ///////////*/
+.intro{
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+}
+
+.intro-text{
+  color: white;
+  font-size: 3rem;
+}
+
+.hide{
+  background: black;
+  overflow: hidden;
+}
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+/*
 input {
   border: none;
   border-bottom: 2px black solid;
@@ -73,3 +179,4 @@ input {
   padding: 1%;
   margin-right: 0;
 }
+*/

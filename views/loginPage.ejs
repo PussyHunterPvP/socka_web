@@ -1,0 +1,97 @@
+<%- include("templaty/hlavicka") %>
+
+
+<div class="container container-login">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="login">Login</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>
+        Admin Panel
+        </p>
+    </div>
+  </div>
+
+
+  <form action="/login" method="post">
+    <div class="mb-3">
+      <label class="form-label">Meno</label>
+      <input type="text" class="form-control" name="username">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Heslo</label>
+      <input type="password" class="form-control" name="password">
+    </div>
+
+    <button type="submit" class="btn btn-warning">Odoslať</button>
+  </form>
+</div>
+
+
+
+<%- include("templaty/paticka") %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /////////////// stare mozno sa zide /////////////////
+<section class="bocny-panel">
+  <div>
+<p class="nadpis">
+  Prototyp_0.0.1
+  </p>
+    </div>
+</section>
+
+<section class="content">
+<h1>Skúška</h1>
+
+
+
+
+<form class="" action="/" method="post">
+  <p class="meno">
+    Meno:
+    <input type="text" name="name">
+    </p>
+  <p class="textInput">
+    Text:
+    <input type="text" name="textInput">
+  </p>
+  <button type="submit" name="button">Odoslať</button>
+</form>
+
+
+
+   menoAtext.forEach(function(menotext){
+      <form class="" action="/delete" method="post">
+    <div class="okienko">
+    <p class="menoDB">
+    Meno:   menotext.name
+    </p>
+    <p class="textDB">
+    Text:   menotext.content
+    </p>
+        <input type="hidden" name="itemToRemove" value=" menotext._id ">
+        <button type="submit" name="button">X</button>
+      </div>
+        </form>
+      });
+///////////////////////////////////////////////////////////
+
+</section>
+-->

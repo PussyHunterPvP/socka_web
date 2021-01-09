@@ -12,9 +12,63 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/skuska", {useNewUrlParser: true, useUnifiedTopology: true} );
+const db = "mongodb://localhost:27017/skuska"
+mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.pluralize(null);
 
+const adminSchema = {
+  username: String,
+  password: String
+};
+
+const Admin = mongoose.model("Admin", adminSchema);
+
+const newAdmin = new Admin({
+  username: "dodo",
+  password: 321
+});
+
+
+app.get("/", (req,res) => {
+  res.render("loginPage");
+});
+
+app.post("/login", (req,res) => {
+  Admin.findOne({username: req.body.username}, (err, result) => {
+    if (result){
+      if(err){
+        res.render(err);
+      } else {
+        if(result.password === req.body.password){
+          Admin.find({}, (err,results)=>{
+            if(!err){
+              const pocetAdminov = results;
+              res.render("adminPanel", {dbInfo: db, pocetAdminov: pocetAdminov});
+            }
+          });
+
+        } else {
+          res.render("loginPage");
+        }
+      }
+    } else {
+      res.render("loginPage");
+    }
+
+  });
+});
+
+app.listen(3000, function(){
+  console.log(" ");
+  console.log("Server ide na porte 3000 ...");
+  console.log(" ");
+});
+
+
+
+
+
+/*
 const formularik = {
   name: String,
   content: String
@@ -58,9 +112,4 @@ app.post("/delete", (req,res)=>{
   });
 
 });
-
-app.listen(3000, function(){
-  console.log(" ");
-  console.log("Server ide na porte 3000 ...");
-  console.log(" ");
-});
+*/
